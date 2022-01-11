@@ -26,6 +26,9 @@ stages:
       inputs:
         version: '$(dotnetSdkVersion)'
 
+    - script: 'sudo npm audit fix'
+      displayName: 'audit fix'
+
     - task: Npm@1
       displayName: 'Run npm install'
       inputs:
